@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <!-- 뷰포트: 화면 크기에 맞게 축소/확대 방지 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <style>
         body, html { 
             margin: 0; 
             padding: 0; 
             height: 100%; 
             overflow: hidden; 
-            -webkit-overflow-scrolling: touch;}
+            }
 
         iframe { 
-            width: 100%; 
-            height: 100%; 
+            display: block;
+            width: 100vw;
+            height: 100vh;
             border: none; 
             overflow: auto;
             -webkit-overflow-scrolling: touch;}
