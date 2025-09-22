@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-<style>
-  /* 전체 뷰포트 크기 설정 */
-  html, body {
-    margin: 0; padding: 0; height: 100%; overflow: hidden;
-  }
-  body {
-    display: flex;
-    justify-content: center; /* 가로 가운데 정렬 */
-    align-items: center;     /* 세로 가운데 정렬 */
-    background: #f0f0f0;     /* 주변 배경색 */
-  }
-  iframe {
-    width: 100vw;    /* 화면 전체 너비 */
-    height: 100vh;   /* 화면 전체 높이 */
-    max-width: 100%; /* 부모 너비를 넘지 않음 */
-    border: none;
-    /* PDF가 width에 맞게 보이도록 */
-    object-fit: contain;
-  }
-</style>
+    <meta charset="UTF-8">
+    <!-- 뷰포트: 화면 크기에 맞게 축소/확대 방지 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <style>
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            width: 100vw;
+            height: 100%; 
+            }
+
+        iframe { 
+            display: block;
+            width: 100vw;
+            height: 100vh;
+            border: none; 
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;}
+    </style>
 </head>
 <body>
-  <iframe src="cohaens_product.pdf" title="코헨스 제품 설명서" scrolling="auto"></iframe>
+    <!-- PDF 파일의 정확한 경로를 입력해주세요 -->
+    <iframe src="cohaens_product.pdf"></iframe>
 </body>
 </html>
